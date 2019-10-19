@@ -618,6 +618,7 @@ public class AutowiredAnnotationBeanPostProcessor extends InstantiationAwareBean
 			}
 			if (value != null) {
 				ReflectionUtils.makeAccessible(field);
+				System.err.println( bean + " 反射 inject " +field);
 				field.set(bean, value);
 			}
 		}

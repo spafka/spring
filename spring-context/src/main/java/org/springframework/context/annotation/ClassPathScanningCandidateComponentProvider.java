@@ -423,7 +423,7 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 			boolean debugEnabled = logger.isDebugEnabled();
 			for (Resource resource : resources) {
 				if (traceEnabled) {
-					logger.trace("Scanning " + resource);
+					logger.debug("Scanning " + resource);
 				}
 				if (resource.isReadable()) {
 					try {
@@ -435,7 +435,9 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 							if (isCandidateComponent(sbd)) {
 								if (debugEnabled) {
 									logger.debug("Identified candidate component class: " + resource);
+
 								}
+								System.err.println("包扫描到 class: " + resource);
 								candidates.add(sbd);
 							}
 							else {

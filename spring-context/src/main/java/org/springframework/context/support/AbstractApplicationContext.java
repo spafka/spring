@@ -524,6 +524,8 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 				// Allows post-processing of the bean factory in context subclasses.
 				postProcessBeanFactory(beanFactory);
 
+				System.out.println("bean factory 前置操作,如 org.springframework.web.context.support.GenericWebApplicationContextServletContextAwareProcessor");
+
 				// Invoke factory processors registered as beans in the context.
 				invokeBeanFactoryPostProcessors(beanFactory);
 
@@ -860,6 +862,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 		beanFactory.freezeConfiguration();
 
 		// Instantiate all remaining (non-lazy-init) singletons.
+		System.err.println("初始化单例 bean");
 		beanFactory.preInstantiateSingletons();
 	}
 

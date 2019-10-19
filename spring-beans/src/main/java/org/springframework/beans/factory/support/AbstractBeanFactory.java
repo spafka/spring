@@ -287,6 +287,8 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 			}
 
 			if (!typeCheckOnly) {
+				// 标记bean正在生成
+				//System.err.println("标记bean正在生成 "+beanName);
 				markBeanAsCreated(beanName);
 			}
 
@@ -298,12 +300,14 @@ public abstract class AbstractBeanFactory extends FactoryBeanRegistrySupport imp
 				String[] dependsOn = mbd.getDependsOn();
 				if (dependsOn != null) {
 					for (String dep : dependsOn) {
+						System.out.println(beanName +" dependsOn " +dep);
 						if (isDependent(beanName, dep)) {
 							throw new BeanCreationException(mbd.getResourceDescription(), beanName,
 									"Circular depends-on relationship between '" + beanName + "' and '" + dep + "'");
 						}
 						registerDependentBean(dep, beanName);
 						try {
+
 							getBean(dep);
 						}
 						catch (NoSuchBeanDefinitionException ex) {
