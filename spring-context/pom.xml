@@ -52,25 +52,25 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-expression</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -181,7 +181,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-instrument</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 			<optional>true</optional>
 		</dependency>

@@ -52,19 +52,19 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-tx</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>
@@ -119,7 +119,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 			<optional>true</optional>
 		</dependency>

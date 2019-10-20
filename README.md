@@ -1,1 +1,1 @@
-find ./ -type f -regex ".*.xml" | xargs perl -pi -e"s/spafka.RELEASE/${revision}/g"
+5.1.2-release

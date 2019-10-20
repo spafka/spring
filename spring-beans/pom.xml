@@ -55,7 +55,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>spafka.RELEASE</version>
+			<version>${revision}</version>
 			<scope>compile</scope>
 		</dependency>
 		<dependency>

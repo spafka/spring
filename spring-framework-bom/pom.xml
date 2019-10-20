@@ -55,7 +55,7 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<!--<dependency>-->
 				<!--<groupId>org.springframework</groupId>-->
@@ -65,97 +65,97 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-beans</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-indexer</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-support</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-expression</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-instrument</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-jcl</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-jdbc</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-jms</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-messaging</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-orm</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-oxm</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-tx</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webflux</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-websocket</artifactId>
-				<version>spafka.RELEASE</version>
+				<version>${revision}</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
