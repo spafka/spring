@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>repack</artifactId>
+		<groupId>org.springframework</groupId>
+		<version>spafka.RELEASE</version>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<artifactId>cglib-repack</artifactId>
+	<version>3.2.8</version>
+
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-shade-plugin</artifactId>
+				<executions>
+					<execution>
+						<id>shade-flink</id>
+						<phase>package</phase>
+						<goals>
+							<goal>shade</goal>
+						</goals>
+						<configuration>
+							<createDependencyReducedPom>true</createDependencyReducedPom>
+							<dependencyReducedPomLocation>${project.basedir}/target/dependency-reduced-pom.xml</dependencyReducedPomLocation>
+							<artifactSet>
+								<includes>
+									<include>io.netty:*</include>
+								</includes>
+							</artifactSet>
+							<relocations>
+								<relocation>
+									<pattern>io.netty</pattern>
+									<shadedPattern>${shading.prefix}.netty4.io.netty</shadedPattern>
+								</relocation>
+							</relocations>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-antrun-plugin</artifactId>
+				<version>1.7</version>
+				<executions>
+					<execution>
+						<id>rename-native-library</id>
+						<phase>package</phase>
+						<configuration>
+							<target>
+								<echo message="unpacking netty jar" />
+								<unzip src="${project.build.directory}/${artifactId}-${version}.jar" dest="${project.build.directory}/unpacked/" />
+								<echo message="renaming native epoll library" />
+								<move todir="${project.build.directory}/unpacked/META-INF/native" includeemptydirs="false">
+									<fileset dir="${project.build.directory}/unpacked/META-INF/native"/>
+									<mapper type="glob" from="libnetty_transport_native_epoll_x86_64.so" to="liborg_apache_flink_shaded_netty4_netty_transport_native_epoll_x86_64.so"/>
+								</move>
+								<echo message="renaming native kqueue library" />
+								<move todir="${project.build.directory}/unpacked/META-INF/native" includeemptydirs="false">
+									<fileset dir="${project.build.directory}/unpacked/META-INF/native"/>
+									<mapper type="glob" from="libnetty_transport_native_kqueue_x86_64.jnilib" to="liborg_apache_flink_shaded_netty4_netty_transport_native_kqueue_x86_64.jnilib"/>
+								</move>
+								<echo message="repackaging netty jar" />
+								<jar destfile="${project.build.directory}/${artifactId}-${version}.jar" basedir="${project.build.directory}/unpacked" />
+							</target>
+						</configuration>
+						<goals>
+							<goal>run</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+
+</project>
