@@ -16,6 +16,7 @@ plugins {
     id "org.jetbrains.kotlin.jvm" version "1.2.71" apply false
     id "org.jetbrains.dokka" version "0.9.17"
     id "org.asciidoctor.convert" version "1.5.8"
+    
 }
 
 ext {
@@ -58,8 +59,10 @@ ext {
 configure(allprojects) { project ->
     group = "org.springframework"
     version = qualifyVersionIfNecessary(version)
-
-    apply plugin: "java"
+    apply plugin: 'java'
+    apply plugin: 'maven'
+    apply plugin: 'eclipse'
+    group = 'org.springframework'
     apply plugin: "kotlin"
 //    apply plugin: "checkstyle"
     apply plugin: "propdeps"
@@ -153,6 +156,9 @@ configure(allprojects) { project ->
     }
 
     dependencies {
+        compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+        //compile 'org.projectlombok:lombok:1.18.2'
+
         testCompile("junit:junit:4.12") {
             exclude group: "org.hamcrest", module: "hamcrest-core"
         }
@@ -211,22 +217,22 @@ configure(subprojects - project(":spring-build-src")) { subproject ->
             expand(copyright: new Date().format("yyyy"), version: project.version)
         }
     }
-
-    javadoc {
-        description = "Generates project-level javadoc for use in -javadoc jar"
-
-        options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PROTECTED
-        options.author = true
-        options.header = project.name
-        options.use = true
-        options.links(project.ext.javadocLinks)
-        options.addStringOption("Xdoclint:none", "-quiet")
-
-        // Suppress warnings due to cross-module @see and @link references.
-        // Note that global 'api' task does display all warnings.
-        logging.captureStandardError LogLevel.INFO
-        logging.captureStandardOutput LogLevel.INFO  // suppress "## warnings" message
-    }
+//
+//    javadoc {
+//        description = "Generates project-level javadoc for use in -javadoc jar"
+//
+//        options.memberLevel = org.gradle.external.javadoc.JavadocMemberLevel.PROTECTED
+//        options.author = true
+//        options.header = project.name
+//        options.use = true
+//        options.links(project.ext.javadocLinks)
+//        options.addStringOption("Xdoclint:none", "-quiet")
+//
+//        // Suppress warnings due to cross-module @see and @link references.
+//        // Note that global 'api' task does display all warnings.
+//        logging.captureStandardError LogLevel.INFO
+//        logging.captureStandardOutput LogLevel.INFO  // suppress "## warnings" message
+//    }
 
     task sourcesJar(type: Jar, dependsOn: classes) {
         duplicatesStrategy = DuplicatesStrategy.EXCLUDE
@@ -234,16 +240,25 @@ configure(subprojects - project(":spring-build-src")) { subproject ->
         from sourceSets.main.allSource
         // Don't include or exclude anything explicitly by default. See SPR-12085.
     }
-
-    task javadocJar(type: Jar) {
-        classifier = "javadoc"
-        from javadoc
+    task copyPomXml(type: Copy, dependsOn: jar){
+        def fileExist = file("${subproject.buildDir}/poms/pom-default.xml").exists()
+        if (!fileExist) {
+            println("file ${subproject.buildDir}/poms/pom-default.xml not exist!")
+        }
+        println("from ${subproject.buildDir}/poms/pom-default.xml to ${subproject.projectDir}/pom.xml")
+        file("${subproject.buildDir}/poms/pom-default.xml").renameTo(file("${subproject.projectDir}/pom.xml"))
     }
+    install.dependsOn(copyPomXml)
 
-    artifacts {
-        archives sourcesJar
-        archives javadocJar
-    }
+//    task javadocJar(type: Jar) {
+//        classifier = "javadoc"
+//        from javadoc
+//    }
+
+//    artifacts {
+//        archives sourcesJar
+//        archives javadocJar
+//    }
 }
 
 configure(rootProject) {
