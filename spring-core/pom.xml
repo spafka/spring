@@ -115,18 +115,6 @@
             <systemPath>${pom.basedir}/../spring-objenesis-repack-3.0.1.jar</systemPath>
         </dependency>
 
-<!--        <dependency>-->
-<!--            <groupId>org.springframework</groupId>-->
-<!--            <artifactId>spring-cglib-repack</artifactId>-->
-<!--			<version>${revision}</version>-->
-<!--		</dependency>-->
-
-<!--		<dependency>-->
-<!--			<groupId>org.springframework</groupId>-->
-<!--			<artifactId>spring-objensis-repack</artifactId>-->
-<!--			<version>${revision}</version>-->
-<!--		</dependency>-->
-
         <dependency>
             <groupId>com.google.code.findbugs</groupId>
             <artifactId>jsr305</artifactId>

@@ -37,6 +37,8 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ConcurrentMap;
 import java.util.function.Supplier;
 
+import lombok.extern.log4j.Log4j2;
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 
 import org.springframework.beans.BeanUtils;
@@ -1739,12 +1741,9 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 	 * @see #applyBeanPostProcessorsAfterInitialization
 	 */
 	protected Object initializeBean(final String beanName, final Object bean, @Nullable RootBeanDefinition mbd) {
-
-		System.out.println("================================================================================\n");
-
-		System.out.println(" 初始化bean " + bean );
-
-		System.out.println("1. aware");
+		logger.warn("================================================================================\n");
+		logger.warn("初始化bean " + bean);
+		logger.warn("1. aware");
 		if (System.getSecurityManager() != null) {
 			AccessController.doPrivileged((PrivilegedAction<Object>) () -> {
 				invokeAwareMethods(beanName, bean);
@@ -1756,12 +1755,12 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 
 		Object wrappedBean = bean;
 		if (mbd == null || !mbd.isSynthetic()) {
-			System.out.println("2. postProcessBefore ");
+			logger.warn("2. postProcessBefore ");
 			wrappedBean = applyBeanPostProcessorsBeforeInitialization(wrappedBean, beanName);
 		}
 
 		try {
-			System.out.println("3. bean  init method" );
+			logger.warn("3. bean  init method");
 			invokeInitMethods(beanName, wrappedBean, mbd);
 
 		} catch (Throwable ex) {
@@ -1770,10 +1769,10 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 					beanName, "Invocation of init method failed", ex);
 		}
 		if (mbd == null || !mbd.isSynthetic()) {
-			System.out.println("4. bean 初始化 ");
+			logger.warn("4. bean 初始化 ");
 			wrappedBean = applyBeanPostProcessorsAfterInitialization(wrappedBean, beanName);
 		}
-		System.out.println("================================================================================");
+		logger.warn("================================================================================");
 		return wrappedBean;
 	}
 
@@ -1792,7 +1791,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
 				((BeanFactoryAware) bean).setBeanFactory(AbstractAutowireCapableBeanFactory.this);
 			}
 		} else {
-			System.out.println(beanName + "不是aware 接口");
+			logger.warn(beanName + "不是aware 接口");
 		}
 	}
 

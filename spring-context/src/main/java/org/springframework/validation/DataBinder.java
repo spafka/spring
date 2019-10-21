@@ -25,6 +25,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 
@@ -106,6 +107,7 @@ import org.springframework.util.StringUtils;
  * @see DefaultBindingErrorProcessor
  * @see org.springframework.context.MessageSource
  */
+@Slf4j
 public class DataBinder implements PropertyEditorRegistry, TypeConverter {
 
 	/** Default object name used for binding: "target". */
