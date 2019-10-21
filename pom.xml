@@ -186,7 +186,7 @@
                     <!-- set verbose to be true if you want lots of uninteresting messages -->
                     <!--<verbose>true</verbose>-->
                     <compilerArguments>
-                        <javaAgentClass>lombok.launch.Agent</javaAgentClass>
+<!--                        <javaAgentClass>lombok.launch.Agent</javaAgentClass>-->
                     </compilerArguments>
                 </configuration>
                 <dependencies>
@@ -200,11 +200,6 @@
                         <groupId>org.codehaus.groovy</groupId>
                         <artifactId>groovy-eclipse-batch</artifactId>
                         <version>2.5.8-02</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>org.projectlombok</groupId>
-                        <artifactId>lombok</artifactId>
-                        <version>1.16.18</version>
                     </dependency>
                 </dependencies>
             </plugin>

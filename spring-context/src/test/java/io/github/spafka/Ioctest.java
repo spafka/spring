@@ -1,6 +1,8 @@
 package io.github.spafka;
 
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -14,14 +16,18 @@ import javax.annotation.PostConstruct;
 import java.util.HashMap;
 import java.util.Map;
 
-//@Slf4j
+
 public class Ioctest {
+
+
+	static final Logger logger = LoggerFactory.getLogger(Ioctest.class);
 
 
 	@Test
 	public void init() {
 
-		//log.info("fuckingcommoing ");
+
+		logger.info("van");
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(config.class);
 
 		applicationContext.start();

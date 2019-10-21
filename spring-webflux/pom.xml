@@ -46,79 +46,61 @@
 			<groupId>io.projectreactor</groupId>
 			<artifactId>reactor-core</artifactId>
 			<version>3.2.2.RELEASE</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.slf4j</groupId>
 			<artifactId>slf4j-api</artifactId>
 			<version>1.7.25</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
 			<version>${revision}</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
 			<version>${revision}</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
 			<version>${revision}</version>
-			<scope>compile</scope>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
 			<artifactId>jackson-databind</artifactId>
 			<version>2.9.7</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.dataformat</groupId>
 			<artifactId>jackson-dataformat-smile</artifactId>
 			<version>2.9.7</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>com.google.protobuf</groupId>
 			<artifactId>protobuf-java-util</artifactId>
 			<version>3.6.1</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>io.projectreactor.netty</groupId>
 			<artifactId>reactor-netty</artifactId>
 			<version>0.8.2.RELEASE</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>io.reactivex</groupId>
 			<artifactId>rxjava</artifactId>
 			<version>1.3.8</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>io.reactivex</groupId>
 			<artifactId>rxjava-reactive-streams</artifactId>
 			<version>1.2.1</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>io.undertow</groupId>
 			<artifactId>undertow-websockets-jsr</artifactId>
 			<version>2.0.14.Final</version>
-			<scope>compile</scope>
 			<exclusions>
 				<exclusion>
 					<artifactId>jboss-websocket-api_1.1_spec</artifactId>
@@ -131,21 +113,16 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>javax.servlet-api</artifactId>
 			<version>4.0.1</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>javax.websocket</groupId>
 			<artifactId>javax.websocket-api</artifactId>
 			<version>1.1</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpclient</artifactId>
 			<version>4.5.6</version>
-			<scope>compile</scope>
 			<exclusions>
 				<exclusion>
 					<artifactId>commons-logging</artifactId>
@@ -158,7 +135,6 @@
 			<groupId>org.apache.tomcat</groupId>
 			<artifactId>tomcat-websocket</artifactId>
 			<version>9.0.12</version>
-			<scope>compile</scope>
 			<exclusions>
 				<exclusion>
 					<artifactId>tomcat-servlet-api</artifactId>
@@ -175,7 +151,6 @@
 			<groupId>org.eclipse.jetty.websocket</groupId>
 			<artifactId>websocket-server</artifactId>
 			<version>9.4.12.v20180830</version>
-			<scope>compile</scope>
 			<exclusions>
 				<exclusion>
 					<artifactId>javax.servlet</artifactId>
@@ -188,43 +163,33 @@
 			<groupId>org.freemarker</groupId>
 			<artifactId>freemarker</artifactId>
 			<version>2.3.28</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-reflect</artifactId>
 			<version>1.2.71</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.jetbrains.kotlin</groupId>
 			<artifactId>kotlin-stdlib</artifactId>
 			<version>1.2.71</version>
-			<scope>compile</scope>
-			<optional>true</optional>
+
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
 			<version>${revision}</version>
-			<scope>compile</scope>
-			<optional>true</optional>
+
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context-support</artifactId>
 			<version>${revision}</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>org.webjars</groupId>
 			<artifactId>webjars-locator-core</artifactId>
 			<version>0.35</version>
-			<scope>compile</scope>
-			<optional>true</optional>
 		</dependency>
 	</dependencies>
 </project>
