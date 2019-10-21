@@ -1,19 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0"
-		 xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-		 xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
-	<parent>
-		<artifactId>spring</artifactId>
-		<groupId>org.springframework</groupId>
-		<version>spafka.RELEASE</version>
-	</parent>
-	<modelVersion>4.0.0</modelVersion>
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
-	<artifactId>repack</artifactId>
-	<packaging>pom</packaging>
-	<modules>
-		<module>cglib-repack</module>
-	</modules>
+
+<!--    <artifactId>spring</artifactId>-->
+    <groupId>org.springframework</groupId>
+    <version>${revision}</version>
+
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>repack</artifactId>
+    <packaging>pom</packaging>
+    <modules>
+        <module>cglib-repack</module>
+        <module>objensis-repack</module>
+    </modules>
+    <properties>
+        <cglib.version>3.2.8</cglib.version>
+        <objenesis.version>3.0.1</objenesis.version>
+    </properties>
 
 
 </project>
