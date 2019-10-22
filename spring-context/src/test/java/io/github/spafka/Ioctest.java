@@ -64,7 +64,7 @@ class B {
 		System.out.println("init method in b");
 	}
 
-	private B() {
+	public B() {
 
 		System.out.println("B 的私有方法被调用");
 	}
