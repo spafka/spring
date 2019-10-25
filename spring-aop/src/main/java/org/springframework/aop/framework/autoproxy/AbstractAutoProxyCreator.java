@@ -465,6 +465,7 @@ public abstract class AbstractAutoProxyCreator extends ProxyProcessorSupport
     protected Object createProxy(Class<?> beanClass, @Nullable String beanName,
                                  @Nullable Object[] specificInterceptors, TargetSource targetSource) {
 
+        log.warn("[AOP] 代理类 >> {}  ",beanName);
         if (this.beanFactory instanceof ConfigurableListableBeanFactory) {
             AutoProxyUtils.exposeTargetClass((ConfigurableListableBeanFactory) this.beanFactory, beanName, beanClass);
         }

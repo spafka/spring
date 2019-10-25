@@ -157,7 +157,7 @@ public interface ConfigurableApplicationContext extends ApplicationContext, Life
 	 * @throws IllegalStateException if already initialized and multiple refresh
 	 * attempts are not supported
 	 */
-	void refresh() throws BeansException, IllegalStateException, NoSuchFieldException, IllegalAccessException;
+	void refresh() throws BeansException, IllegalStateException;
 
 	/**
 	 * Register a shutdown hook with the JVM runtime, closing this context
