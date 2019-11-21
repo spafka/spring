@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring</artifactId>
-		<version>${revision}</version>
+		<version>5.1.2.RELEASE</version>
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>spring-websocket</artifactId>
@@ -50,18 +50,18 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-web</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>com.fasterxml.jackson.core</groupId>
@@ -164,12 +164,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-messaging</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-webmvc</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 	</dependencies>
 </project>

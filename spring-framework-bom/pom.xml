@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring</artifactId>
-		<version>${revision}</version>
+		<version>5.1.2.RELEASE</version>
 	</parent>
 
 	<artifactId>spring-framework-bom</artifactId>
@@ -54,7 +54,7 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-aop</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<!--<dependency>-->
 				<!--<groupId>org.springframework</groupId>-->
@@ -64,97 +64,97 @@
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-beans</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-indexer</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-context-support</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-core</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-expression</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-instrument</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-jcl</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-jdbc</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-jms</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-messaging</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-orm</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-oxm</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-test</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-tx</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-web</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webflux</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-webmvc</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 			<dependency>
 				<groupId>org.springframework</groupId>
 				<artifactId>spring-websocket</artifactId>
-				<version>${revision}</version>
+				<version>5.1.2.RELEASE</version>
 			</dependency>
 		</dependencies>
 	</dependencyManagement>

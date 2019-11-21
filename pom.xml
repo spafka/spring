@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>org.springframework</groupId>
     <artifactId>spring</artifactId>
-    <version>${revision}</version>
+    <version>5.1.2.RELEASE</version>
 
     <packaging>pom</packaging>
     <name>Spring</name>
@@ -48,8 +48,9 @@
         <java.version>1.8</java.version>
         <groovy.version>2.4.15</groovy.version>
         <lombok.version>1.16.18</lombok.version>
-        <revision>spafka.RELEASE</revision>
+        <revision>5.1.2.RELEASE</revision>
     </properties>
+
 
 
     <dependencies>

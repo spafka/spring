@@ -437,7 +437,7 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 									logger.debug("Identified candidate component class: " + resource);
 
 								}
-								System.out.println("包扫描到 class: " + resource);
+								logger.debug("包扫描到 class: " + resource);
 								candidates.add(sbd);
 							}
 							else {

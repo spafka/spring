@@ -35,7 +35,7 @@ public class Ioctest {
 }
 
 @Configuration
-@ComponentScan
+@ComponentScan(value = {})
 class config {
 
 	@Bean("map")

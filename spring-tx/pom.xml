@@ -6,7 +6,7 @@
 	<parent>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring</artifactId>
-		<version>${revision}</version>
+		<version>5.1.2.RELEASE</version>
 	</parent>
 	<packaging>jar</packaging>
 	<artifactId>spring-tx</artifactId>
@@ -50,12 +50,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-beans</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 		<!--fixme -->
 		<dependency>
@@ -90,12 +90,12 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-aop</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-context</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 	</dependencies>
 </project>

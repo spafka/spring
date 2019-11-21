@@ -8,7 +8,7 @@
 	<parent>
 		<groupId>org.springframework</groupId>
 		<artifactId>spring</artifactId>
-		<version>${revision}</version>
+		<version>5.1.2.RELEASE</version>
 	</parent>
 	<packaging>jar</packaging>
 
@@ -54,7 +54,7 @@
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-core</artifactId>
-			<version>${revision}</version>
+			<version>5.1.2.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>javax.inject</groupId>
