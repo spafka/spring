@@ -39,3 +39,4 @@ out
 test-output
 atlassian-ide-plugin.xml
 .gradletasknamecache
+dependency-reduced-pom.xml
