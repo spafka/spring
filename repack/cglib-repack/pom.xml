@@ -36,6 +36,11 @@
 									<pattern>net.sf.cglib</pattern>
 									<shadedPattern>org.springframework.cglib</shadedPattern>
 								</relocation>
+								<relocation>
+									<pattern>org.objectweb.asm</pattern>
+									<shadedPattern>org.springframework.asm</shadedPattern>
+								</relocation>
+
 							</relocations>
 						</configuration>
 					</execution>
