@@ -573,6 +573,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
             // Prepare the bean factory for use in this context.
             prepareBeanFactory(beanFactory);
+            // 注册了几个aware接口
 
             try {
                 // 【这里需要知道 BeanFactoryPostProcessor 这个知识点，Bean 如果实现了此接口，
@@ -580,7 +581,7 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
 
                 // 这里是提供给子类的扩展点，到这里的时候，所有的 Bean 都加载、注册完成了，但是都还没有初始化
                 // 具体的子类可以在这步的时候添加一些特殊的 BeanFactoryPostProcessor 的实现类或做点什么事
-                postProcessBeanFactory(beanFactory);
+                postProcessBeanFactory(beanFactory); // 默认空实现，web下还有特殊的实现
                 // 调用 BeanFactoryPostProcessor 各个实现类的 postProcessBeanFactory(factory) 回调方法
                 invokeBeanFactoryPostProcessors(beanFactory);
 

@@ -1,4 +1,4 @@
-package io.github.spafka;
+package io.github.spafka.ioc;
 
 import org.junit.Test;
 import org.springframework.beans.BeansException;
@@ -23,7 +23,7 @@ public class Ioctest {
 
 		AnnotationConfigApplicationContext applicationContext = new AnnotationConfigApplicationContext(config.class);
 
-		applicationContext.start();
+		// applicationContext.start();
 
 
 		Map<String, String> map = (Map<String, String>) applicationContext.getBean("map");

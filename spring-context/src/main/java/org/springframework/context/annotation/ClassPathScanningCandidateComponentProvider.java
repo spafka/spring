@@ -434,10 +434,10 @@ public class ClassPathScanningCandidateComponentProvider implements EnvironmentC
 							sbd.setSource(resource);
 							if (isCandidateComponent(sbd)) {
 								if (debugEnabled) {
-									logger.debug("Identified candidate component class: " + resource);
+									logger.debug("包扫描到 component class: " + resource);
 
 								}
-								logger.debug("包扫描到 class: " + resource);
+
 								candidates.add(sbd);
 							}
 							else {
