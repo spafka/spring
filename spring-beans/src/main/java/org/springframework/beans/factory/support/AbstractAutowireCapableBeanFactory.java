@@ -436,7 +436,7 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
         Object result = existingBean;
         for (BeanPostProcessor processor : getBeanPostProcessors()) {
 
-            log.info("processor 对bean 处理 {} {}", processor, beanName);
+            log.info("processor  {} 对bean 处理  {}", processor, beanName);
             Object current = processor.postProcessBeforeInitialization(result, beanName);
             if (current == null) {
                 return result;

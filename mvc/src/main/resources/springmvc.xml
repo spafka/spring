@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:util="http://www.springframework.org/schema/util"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!--制定要扫描的包-->
+    <context:component-scan base-package="io.github.spafka"></context:component-scan>
+
+<!--    &lt;!&ndash;指定视图解析器&ndash;&gt;-->
+<!--    <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">-->
+<!--        &lt;!&ndash; 视图的路径 &ndash;&gt;-->
+<!--        <property name="prefix" value="/WEB-INF/view/"/>-->
+<!--        &lt;!&ndash; 视图名称后缀  &ndash;&gt;-->
+<!--        <property name="suffix" value=".jsp"/>-->
+<!--    </bean>-->
+</beans>

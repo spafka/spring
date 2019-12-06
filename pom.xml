@@ -89,6 +89,7 @@
         <module>spring-messaging</module>
         <module>spring-webmvc</module>
         <module>spring-jdbc</module>
+        <module>mvc</module>
         <!--    <module>repack</module>-->
 
     </modules>
