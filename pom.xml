@@ -90,7 +90,8 @@
         <module>spring-webmvc</module>
         <module>spring-jdbc</module>
         <module>mvc</module>
-        <!--    <module>repack</module>-->
+
+        <module>boot</module>
 
     </modules>
 
