@@ -18,8 +18,9 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.7</maven.compiler.source>
-        <maven.compiler.target>1.7</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+        <log4j2.version>2.11.1</log4j2.version>
     </properties>
 
     <dependencies>
@@ -31,9 +32,46 @@
         </dependency>
 
         <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.8</version>
+        </dependency>
+        <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>${project.version}</version>
+            <version>5.1.2.RELEASE</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>javax.jws</artifactId>
+                    <groupId>org.glassfish.main</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>jetty-reactive-httpclient</artifactId>
+                    <groupId>org.eclipse.jetty</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>javax.servlet.jsp-api</artifactId>
+                    <groupId>javax.servlet.jsp</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>javax.servlet.jsp.jstl-api</artifactId>
+                    <groupId>javax.servlet.jsp.jstl</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>javax.servlet-api</artifactId>
+                    <groupId>javax.servlet</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>tomcat-embed-core</artifactId>
+                    <groupId>org.apache.tomcat.embed</groupId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+            <version>5.1.2.RELEASE</version>
         </dependency>
     </dependencies>
 
@@ -59,11 +97,52 @@
                 <groupId>org.apache.tomcat.maven</groupId>
                 <artifactId>tomcat7-maven-plugin</artifactId>
                 <version>2.2</version>
+
+                <dependencies>
+                    <dependency>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                        <version>1.7.25</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-core</artifactId>
+                        <version>${log4j2.version}</version>
+                    </dependency>
+                    <dependency>
+                        <groupId>org.apache.logging.log4j</groupId>
+                        <artifactId>log4j-api</artifactId>
+                        <version>${log4j2.version}</version>
+                    </dependency>
+                </dependencies>
                 <configuration>
                     <port>80</port>
                     <path>/</path>
                     <uriEncoding>UTF-8</uriEncoding>
                     <server>tomcat7</server>
+
+                    <systemProperties>
+                        <spring.profiles.active>webService</spring.profiles.active>
+                        <java.util.logging.config.file>src/main/resources/log4j2.xml</java.util.logging.config.file>
+                    </systemProperties>
+                    <tomcatLoggingFile>a.log</tomcatLoggingFile>
+                    <extraDependencies>
+                        <dependency>
+                            <groupId>org.slf4j</groupId>
+                            <artifactId>slf4j-api</artifactId>
+                            <version>1.7.25</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.logging.log4j</groupId>
+                            <artifactId>log4j-core</artifactId>
+                            <version>${log4j2.version}</version>
+                        </dependency>
+                        <dependency>
+                            <groupId>org.apache.logging.log4j</groupId>
+                            <artifactId>log4j-api</artifactId>
+                            <version>${log4j2.version}</version>
+                        </dependency>
+                    </extraDependencies>
                 </configuration>
             </plugin>
         </plugins>

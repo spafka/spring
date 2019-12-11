@@ -190,6 +190,7 @@
                     <compilerArguments>
                         <javaAgentClass>lombok.launch.Agent</javaAgentClass>
                     </compilerArguments>
+                    <fork>true</fork>
                 </configuration>
                 <dependencies>
                     <dependency>

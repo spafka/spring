@@ -158,11 +158,15 @@
 			<groupId>io.undertow</groupId>
 			<artifactId>undertow-core</artifactId>
 			<version>2.0.14.Final</version>
+			<scope>provided</scope>
+			<optional>true</optional>
 		</dependency>
 		<dependency>
 			<groupId>io.undertow</groupId>
 			<artifactId>undertow-servlet</artifactId>
 			<version>2.0.14.Final</version>
+			<scope>provided</scope>
+			<optional>true</optional>
 			<exclusions>
 				<exclusion>
 					<artifactId>jboss-servlet-api_3.1_spec</artifactId>
