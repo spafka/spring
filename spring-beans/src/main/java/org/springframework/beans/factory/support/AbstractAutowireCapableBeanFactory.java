@@ -1743,9 +1743,10 @@ public abstract class AbstractAutowireCapableBeanFactory extends AbstractBeanFac
      * @see #applyBeanPostProcessorsAfterInitialization
      */
     protected Object initializeBean(final String beanName, final Object bean, @Nullable RootBeanDefinition mbd) {
-        logger.warn("================================================================================\n");
-        logger.warn("初始化bean " + bean);
-        logger.warn("1. aware ?");
+
+        logger.info("================================================================================\n");
+        logger.warn("初始化bean " + beanName);
+
         if (System.getSecurityManager() != null) {
             AccessController.doPrivileged((PrivilegedAction<Object>) () -> {
                 invokeAwareMethods(beanName, bean);

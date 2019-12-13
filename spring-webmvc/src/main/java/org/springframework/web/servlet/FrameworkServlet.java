@@ -518,7 +518,7 @@ public abstract class FrameworkServlet extends HttpServletBean implements Applic
 	protected final void initServletBean() throws ServletException {
 		getServletContext().log("Initializing Spring " + getClass().getSimpleName() + " '" + getServletName() + "'");
 		if (logger.isInfoEnabled()) {
-			logger.info("Initializing Servlet '" + getServletName() + "'");
+			logger.warn("初始化  Servlet '" + getServletName() + "'");
 		}
 		long startTime = System.currentTimeMillis();
 

@@ -591,27 +591,24 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
                 // 两个方法分别在 Bean 初始化之前和初始化之后得到执行。这里仅仅是注册，之后会看到回调这两方法的时机
                 registerBeanPostProcessors(beanFactory);
 
-
+                System.err.println("beanFactory 前置处理器处理完成");
                 Class<AbstractBeanFactory> abstractBeanFactoryClass = AbstractBeanFactory.class;
 
                 Field fbps = abstractBeanFactoryClass.getDeclaredField("beanPostProcessors");
                 fbps.setAccessible(true);
+                // 所有bean加工类
                 List<BeanPostProcessor> bps = (List<BeanPostProcessor>) fbps.get(getBeanFactory());
 
-                logger.debug("*****************************************************************************************");
-                logger.debug("[FACTORY] 初始化完成,  接着实例化bean ");
+                logger.error("*****************************************************************************************");
+                System.err.println("[FACTORY] 初始化完成,  接着实例化bean ");
 
                 bps.forEach(x -> {
-                    log.debug("bean facoty process bean {}", x);
+                    System.err.println("bean facoty process bean "+ x);
                 });
-                logger.warn("*****************************************************************************************");
+                logger.error("*****************************************************************************************");
 
 
                 String[] names = getBeanDefinitionNames();
-
-                for (String name : names) {
-                    log.info("bean >> {}",name);
-                }
 
                 logger.info("*****************************************************************************************");
 
@@ -634,12 +631,11 @@ public abstract class AbstractApplicationContext extends DefaultResourceLoader
                 // 初始化所有的 singleton beans
                 //（lazy-init 的除外）
 
-
                 log.warn("初始化所有单例类 starting .............");
                 finishBeanFactoryInitialization(beanFactory);
                 log.warn("初始化所有单例类 done !!!!!!!!!!");
 
-                // 最后，广播事件，ApplicationContext 初始化完成，不展开
+                // 最后，广播事件，ApplicationContext 初始化完成，不展开 dubbo在此后调用，export，而非在 @PreConstruct中
                 finishRefresh();
             } catch (BeansException ex) {
                 if (logger.isWarnEnabled()) {
